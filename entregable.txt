@@ -1,0 +1,23 @@
+LABORATORIO AnimationsCssLab
+Alumno: Axel Alfonso García Núñez
+Materia: Implementación de Sistemas
+
+PREGUNTA 1
+Al mantener el clic sobre una card, la tarjeta ejecuta una animación diagonal (efecto de corte que la hace aparecer desde un lado). Lo provoca el selector .card:active, que aplica la animación slit-in-diagonal-2 mientras el botón del mouse permanece presionado.
+
+PREGUNTA 2
+Al agregar el bloque .card con la animación slit-in-diagonal-2, las cards se animan solas cada vez que se carga o recarga la página: entran en diagonal en lugar de aparecer estáticas, sin necesidad de interacción del usuario.
+
+PREGUNTA 3
+Selectores elegidos:
+1) .card:focus-within - se activa cuando un elemento dentro de la card tiene el foco. Al hacer clic en el botón "Go somewhere", esa card repite la animación de entrada.
+2) .card:has(.btn:hover) - selecciona la card que contiene un botón sobre el que está el cursor. Al pasar el mouse sobre el botón, toda la card se anima.
+3) .col-xl-3:nth-child(odd) .card - selecciona las cards de las columnas impares. Al recargar la página solo las cards 1, 3 y 5 se animan, y las pares quedan estáticas.
+
+PREGUNTA 4
+@keyframes sirve para definir los pasos o estados por los que pasa una animación CSS. Se indica cómo se ve el elemento al inicio (0% o from), al final (100% o to) y, si se quiere, en puntos intermedios. Después, la propiedad animation le asigna ese nombre al elemento y el navegador calcula la transición entre cada estado.
+
+PREGUNTA 5
+transform - Permite modificar elementos: pueden ser trasladados, rotados, escalados o sesgados de acuerdo con los valores establecidos. En kenburns-top se usa scale y translateY para acercar la imagen.
+animation-duration - Define cuánto tiempo tarda la animación en completarse, por ejemplo 5s en kenburns-top o 450ms en slit-in-diagonal-2.
+animation-timing-function - Define la curva de velocidad con la que avanza la animación (linear, ease-out, cubic-bezier, etc.). En kenburns-top se usa ease-out, que empieza rápido y termina suave.
